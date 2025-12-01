@@ -1,0 +1,17 @@
+[build]
+  command="npm start"
+  publish="start"
+  base="/"
+[build]
+  command="npm start build"
+  publish="start build"
+  base="/"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache, no-store, must-revalidate"
